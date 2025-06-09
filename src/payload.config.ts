@@ -2,6 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { s3Storage } from "@payloadcms/storage-s3";
 
 import { buildConfig } from "payload";
 import sharp from "sharp";
@@ -32,4 +33,19 @@ export default buildConfig({
 		url: process.env.DATABASE_URI || "",
 	}),
 	sharp,
+	plugins: [
+		s3Storage({
+			collections: {
+				media: true,
+			},
+			bucket: process.env.S3_BUCKET || "",
+			config: {
+				credentials: {
+					accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+					secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+				},
+				region: process.env.S3_REGION,
+			},
+		}),
+	],
 });
