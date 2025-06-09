@@ -7,11 +7,11 @@ import {
 	lexicalEditor,
 	UnderlineFeature,
 	type LinkFields,
-  OrderedListFeature,
-  UnorderedListFeature,
-  BlockquoteFeature,
-  HorizontalRuleFeature,
-  StrikethroughFeature,
+	OrderedListFeature,
+	UnorderedListFeature,
+	BlockquoteFeature,
+	HorizontalRuleFeature,
+	StrikethroughFeature,
 } from "@payloadcms/richtext-lexical";
 
 export const defaultLexical = lexicalEditor({
@@ -20,11 +20,11 @@ export const defaultLexical = lexicalEditor({
 		UnderlineFeature(),
 		BoldFeature(),
 		ItalicFeature(),
-    OrderedListFeature(),
-    UnorderedListFeature(),
-    BlockquoteFeature(),
-    HorizontalRuleFeature(),
-    StrikethroughFeature(),
+		OrderedListFeature(),
+		UnorderedListFeature(),
+		BlockquoteFeature(),
+		HorizontalRuleFeature(),
+		StrikethroughFeature(),
 		LinkFeature({
 			enabledCollections: ["articles"],
 			fields: ({ defaultFields }) => {

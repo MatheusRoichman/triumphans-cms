@@ -65,7 +65,7 @@ export const Articles: CollectionConfig = {
 							admin: {
 								position: "sidebar",
 							},
-							
+
 							filterOptions: ({ id }) => {
 								return {
 									id: {
