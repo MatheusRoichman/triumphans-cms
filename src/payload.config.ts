@@ -2,7 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
-import { resendAdapter } from '@payloadcms/email-resend'
+import { resendAdapter } from "@payloadcms/email-resend";
 import { s3Storage } from "@payloadcms/storage-s3";
 
 import { buildConfig } from "payload";
@@ -24,13 +24,16 @@ export default buildConfig({
 			baseDir: path.resolve(dirname),
 		},
 	},
+	routes: {
+		admin: "/",
+	},
 	collections: [Users, Media, Articles, Categories],
 	editor: defaultLexical,
 	email: resendAdapter({
-    defaultFromAddress: 'admin@triumphansfides.com',
-    defaultFromName: 'Triumphans Fides',
-    apiKey: process.env.RESEND_API_KEY || '',
-  }),
+		defaultFromAddress: "admin@triumphansfides.com",
+		defaultFromName: "Triumphans Fides",
+		apiKey: process.env.RESEND_API_KEY || "",
+	}),
 	secret: process.env.PAYLOAD_SECRET || "",
 	typescript: {
 		outputFile: path.resolve(dirname, "payload-types.ts"),
