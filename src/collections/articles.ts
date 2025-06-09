@@ -1,5 +1,4 @@
 import {
-	BlocksFeature,
 	FixedToolbarFeature,
 	HeadingFeature,
 	HorizontalRuleFeature,
