@@ -4,6 +4,7 @@
     "": {
       "dependencies": {
         "@payloadcms/db-mongodb": "3.40.0",
+        "@payloadcms/email-resend": "3.40.0",
         "@payloadcms/next": "3.40.0",
         "@payloadcms/plugin-seo": "3.40.0",
         "@payloadcms/richtext-lexical": "3.40.0",
@@ -426,6 +427,8 @@
     "@nolyfill/is-core-module": ["@nolyfill/is-core-module@1.0.39", "", {}, "sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA=="],
 
     "@payloadcms/db-mongodb": ["@payloadcms/db-mongodb@3.40.0", "", { "dependencies": { "mongoose": "8.9.5", "mongoose-paginate-v2": "1.8.5", "prompts": "2.4.2", "uuid": "10.0.0" }, "peerDependencies": { "payload": "3.40.0" } }, "sha512-mHOZq75GV4Fey+KOAuQOl7M76WDAuuq060NsxNNWqGG32d5ic3KuSXjCt7QAKhL9TIBGfNFmYly8riQRHsxXRw=="],
+
+    "@payloadcms/email-resend": ["@payloadcms/email-resend@3.40.0", "", { "peerDependencies": { "payload": "3.40.0" } }, "sha512-sGfUTkvcFdLGQek6CJ0RluPKNU7s98u+f2LrQ5jKU+PYKUnFtO7ny2kQlKuZ+wg806Rmbh/AOHDW/kVg0QVvEw=="],
 
     "@payloadcms/graphql": ["@payloadcms/graphql@3.40.0", "", { "dependencies": { "graphql-scalars": "1.22.2", "pluralize": "8.0.0", "ts-essentials": "10.0.3", "tsx": "4.19.2" }, "peerDependencies": { "graphql": "^16.8.1", "payload": "3.40.0" }, "bin": { "payload-graphql": "bin.js" } }, "sha512-6L6dQgPA30EzUXeTO6BHfHzuUxPnM9qWRuT2Rx6z69JyxVPiTssvuHrqr/NQYjK/X6ZE8cKT5RfgrjhPeRsj+g=="],
 
